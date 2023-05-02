@@ -13,8 +13,8 @@ const gameProcess = ()=> {
     console.log(`Question: ${num}`);
     const userAnswer = readlineSync.question('Your answer: ');
     const correctAnswer = `${num % 2 === 0 ? 'yes' : 'no'}`;
-    if (userAnswer !== correctAnswer) {
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${userName}!`);
+    if (userAnswer.toLowerCase() !== correctAnswer) {
+      console.log(`${userAnswer.toLowerCase()} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${userName}!`);
       return;
     } else {
       console.log(`Congratulations, ${userName}!`);
